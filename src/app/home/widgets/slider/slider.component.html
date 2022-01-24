@@ -1,7 +1,7 @@
 <owl-carousel-o [options]="HomeSliderConfig" class="home-slider" [ngClass]="class">
     <ng-container *ngFor="let slider of sliders">
         <ng-template carouselSlide>
-            <div class="home" [ngClass]="textClass" [ngStyle]="{'background-image': 'url('+slider.image+')'}">
+            <div class="home" [ngClass]="textClass" [ngStyle]="{'background-image': 'url('+slider.image+')'}" (click)="clickSlider()">
                 <div class="container">
                     <div class="row">
                         <div class="col">
@@ -9,9 +9,9 @@
                                 <div>
                                     <!-- <h1 class="green_slider">{{slider.title}}</h1>
                                     <h2 class="green_slider">{{slider.subTitle}}</h2> -->
-                                    <a [routerLink]="['/shop/collection/left/sidebar']" [queryParams]="{ category: category}" class="btn btn-solid" style="margin-top: 220px; margin-left: 50px; background:#f28f1e; border: none;" [ngClass]="buttonClass">
+                                    <!-- <a [routerLink]="['/shop/collection/left/sidebar']" [queryParams]="{ category: category}" class="btn btn-solid" style="margin-top: 220px; margin-left: 50px; background:#f28f1e; border: none;" [ngClass]="buttonClass">
 	                   {{buttonText}}
-	                </a>
+	                </a> -->
                                 </div>
                             </div>
                         </div>

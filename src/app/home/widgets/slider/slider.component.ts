@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HomeSlider } from '../../../shared/data/slider';
 
 @Component({
@@ -15,11 +16,14 @@ export class SliderComponent implements OnInit {
   @Input() buttonText: string;
   @Input() buttonClass: string;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private router:Router) { }
 
   ngOnInit(): void {
   }
 
+  clickSlider(){
+    this.router.navigate(['/shop/collection/left/sidebar'], { queryParams: { category: this.category}});
+  }
   public HomeSliderConfig: any = HomeSlider;
 
 }
