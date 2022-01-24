@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: Aller-Bold;
+    src: url(assets/fonts/Aller_Std_Bd.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: Aller;
+    src: url(assets/fonts/Aller_Std_Rg.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: Raspoutine;
+    src: url(assets/fonts/RaspoutineDemiBold_TB.otf);
+}
+
+.br-units {
+    display: none !important;
+}

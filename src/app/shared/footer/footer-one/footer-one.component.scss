@@ -1,0 +1,30 @@
+@import '../../../../assets/scss/theme/variables';
+hr {
+    height: 2px;
+    background: $grey-hr;
+}
+
+.footer-banner {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-text {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    p {
+        font-size: 23px !important;
+        font-family: Aller-Bold !important;
+        color: $white !important;
+    }
+}

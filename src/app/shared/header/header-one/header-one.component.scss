@@ -1,0 +1,54 @@
+@import '../../../../assets/scss/theme/variables';
+a {
+    font-family: Aller-Bold;
+    color: $white !important
+}
+
+hr {
+    height: 2px;
+    background: $grey-hr;
+}
+
+.nav-header-brand {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    font-family: Aller-Bold;
+    height: 16px;
+    li {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-right: -15px;
+        margin-left: -15px;
+        align-content: center;
+        justify-content: center;
+    }
+}
+
+.Chevron {
+    position: relative;
+    display: block;
+    height: 5px;
+    left: 5px;
+    top: 8px;
+}
+
+.Chevron:before,
+.Chevron:after {
+    position: absolute;
+    content: "";
+    border: 5px solid transparent;
+}
+
+.Chevron:before {
+    top: 0;
+    border-top-color: $black;
+}
+
+.Chevron:after {
+    top: -1px;
+    border-top-color: $white;
+}

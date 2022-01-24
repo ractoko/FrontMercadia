@@ -1,0 +1,16 @@
+@import '../../../../assets/scss/theme/variables';
+.service-block {
+    +.service-block {
+        border-left: 2px solid $grey-border !important;
+    }
+    h4 {
+        font-family: Aller-Bold;
+        color: $green-dark !important;
+        font-style: italic;
+    }
+    p {
+        font-family: Aller;
+        color: $grey-text !important;
+        font-weight: 600;
+    }
+}

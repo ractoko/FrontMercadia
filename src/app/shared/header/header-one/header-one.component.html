@@ -1,0 +1,80 @@
+<header [ngClass]="class" [class.fixed]="stick && sticky">
+    <div class="mobile-fix-option"></div>
+    <div class="top-header" *ngIf="topbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="header-contact">
+                        <ul>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-right">
+                    <ul class="header-dropdown">
+                        <li class="mobile-wishlist">
+                            <a [routerLink]="['/shop/wishlist']"><img src="../../../../assets/images/icon/whatsapp_icon.png" height="21px" width="21px" /> Whatsapp 818-486-0496</a>
+                        </li>
+                        <!-- <li class="onhover-dropdown mobile-account">
+              <i class="fa fa-user" aria-hidden="true"></i> My Account
+              <ul class="onhover-show-div">
+                <li>
+                  <a data-lng="en">
+                    Login
+                  </a>
+                </li>
+                <li>
+                  <a data-lng="es">
+                    Logout
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="main-menu">
+                    <div class="menu-left">
+                        <app-left-menu></app-left-menu>
+                    </div>
+                    <div class="brand-logo">
+                        <a routerLink="/home/fashion" id="headerlogo">
+                            <img [src]="themeLogo" class="img-fluid" alt="logo">
+                        </a>
+                    </div>
+                    <div class="menu-right pull-right">
+                        <div>
+                            <!-- <app-menu></app-menu> -->
+                        </div>
+                        <div>
+                            <app-settings></app-settings>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sticky" [class.fixed]="stick && sticky" style="left: 0px;">
+            <div class="column">
+                <hr>
+            </div>
+            <div>
+                <ul class="nav-header-brand col-sm-12">
+                    <li>Promociones<i class="Chevron"></i></li>
+                    <li><img src="../../../../assets/images/icon/Mercadia_Iconos_4.png" width="23px" height="23px">Frutas y Verduras<i class="Chevron"></i></li>
+                    <li><img src="../../../../assets/images/icon/Mercadia_Iconos_5.png" width="23px" height="23px">Abarrotes<i class="Chevron"></i></li>
+                    <li><img src="../../../../assets/images/icon/Mercadia_Iconos_6.png" width="23px" height="23px">Carnes y Pollo<i class="Chevron"></i></li>
+                    <li><img src="../../../../assets/images/icon/Mercadia_Iconos_7.png" width="23px" height="23px">Lácteos<i class="Chevron"></i></li>
+                    <li><img src="../../../../assets/images/icon/Mercadia_Iconos_8.png" width="23px" height="23px">Panadería<i class="Chevron"></i></li>
+                    <li><img src="../../../../assets/images/icon/Mercadia_Iconos_9.png" width="23px" height="23px">Limpieza e Higiene<i class="Chevron"></i></li>
+                </ul>
+            </div>
+            <div class="column">
+                <hr>
+            </div>
+        </div>
+    </div>
+</header>
