@@ -1227,8 +1227,8 @@ header {
     }
     .brand-logo {
         display: inline-block;
-        padding-top: 25px;
-        padding-bottom: 25px;
+        // padding-top: 25px;
+        // padding-bottom: 25px;
     }
     .menu-left {
         display: flex;
@@ -1672,16 +1672,16 @@ header {
     overflow: hidden;
     &:before,
     &:after {
-        background: var(--theme-deafult);
-        width: 25%;
-        position: absolute;
-        content: '';
-        opacity: 0;
-        -webkit-transition: all 0.3s steps(4);
-        transition: all 0.3s steps(4);
-        z-index: 1;
-        bottom: 100%;
-        top: 0;
+        // background: var(--theme-deafult);
+        // width: 25%;
+        // position: absolute;
+        // content: '';
+        // opacity: 0;
+        // -webkit-transition: all 0.3s steps(4);
+        // transition: all 0.3s steps(4);
+        // z-index: 1;
+        // bottom: 100%;
+        // top: 0;
     }
     &:before {
         left: 0;
@@ -1694,16 +1694,16 @@ header {
     span {
         &:before,
         &:after {
-            background: var(--theme-deafult);
-            width: 25%;
-            position: absolute;
-            content: '';
-            opacity: 0;
-            -webkit-transition: all 0.3s steps(4);
-            transition: all 0.3s steps(4);
-            z-index: 1;
-            bottom: 100%;
-            top: 0;
+            // background: var(--theme-deafult);
+            // width: 25%;
+            // position: absolute;
+            // content: '';
+            // opacity: 0;
+            // -webkit-transition: all 0.3s steps(4);
+            // transition: all 0.3s steps(4);
+            // z-index: 1;
+            // bottom: 100%;
+            // top: 0;
         }
         &:before {
             left: 50%;
@@ -14216,8 +14216,8 @@ div#loading-bar {
 
 @import '../theme/variables';
 .border-grey {
-    border-top: 2px solid $grey-border !important;
-    border-bottom: 2px solid $grey-border !important;
+    border-top: 1px solid $grey-border !important;
+    border-bottom: 0px solid $grey-border !important;
     padding-top: 0px !important;
     padding-bottom: 0px !important;
 }
