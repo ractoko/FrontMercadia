@@ -35,7 +35,7 @@ export class FashionOneComponent implements OnInit {
   }, {
     title: 'Calidad',
     subTitle: 'Garantizada',
-    image: 'assets/images/slider/2.jpg'
+    image: '../../../../assets/images/slider/2.jpg'
   }]
 
   // Collection banner

@@ -14,11 +14,11 @@
                                 </span>
                             </div>
                             <!-- Category filter start -->
-                            <app-categories></app-categories>
+                            <!-- <app-categories></app-categories> -->
                         </div>
                         <!-- silde-bar colleps block end here -->
                         <!-- side-bar colleps block stat -->
-                        <div class="collection-filter-block">
+                        <div class="collection-filter-block" style="display: none;">
                             <!-- brand filter start -->
                             <app-brands [products]="products" [brands]="brands" (brandsFilter)="updateFilter($event)">
                             </app-brands>
@@ -34,11 +34,11 @@
                         </div>
                         <!-- silde-bar colleps block end here -->
                         <!-- side-bar single product slider start -->
-                        <app-product-box-vertical-slider [title]="'New Products'">
+                        <app-product-box-vertical-slider [title]="'Productos'">
                         </app-product-box-vertical-slider>
                         <!-- side-bar single product slider end -->
                         <!-- side-bar banner start here -->
-                        <div class="collection-sidebar-banner">
+                        <div class="collection-sidebar-banner" style="display: none;">
                             <a [routerLink]="['/shop/collection/left/sidebar']">
                                 <img src="assets/images/collection-sidebar-banner.png" class="img-fluid" alt="banner">
                             </a>
@@ -51,11 +51,11 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="top-banner-wrapper">
-                                    <a [routerLink]="['/shop/collection/left/sidebar']">
+                                    <!-- <a [routerLink]="['/shop/collection/left/sidebar']">
                                         <img src="assets/images/collection-banner.jpg" class="img-fluid " alt="">
-                                    </a>
+                                    </a> -->
                                     <div class="top-banner-content small-section">
-                                        <h4>fashion</h4>
+                                        <h4></h4>
                                         <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                         </h5>
                                         <p>

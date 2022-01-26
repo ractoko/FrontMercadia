@@ -26,6 +26,7 @@ export class CollectionLeftSidebarComponent implements OnInit {
   public sortBy: string; // Sorting Order
   public mobileSidebar: boolean = false;
   public loader: boolean = true;
+  public onlyFashion: boolean = true;
 
   constructor(private route: ActivatedRoute, private router: Router,
     private viewScroller: ViewportScroller, public productService: ProductService) {   
@@ -40,6 +41,7 @@ export class CollectionLeftSidebarComponent implements OnInit {
         this.tags = [...this.brands, ...this.colors, ...this.size]; // All Tags Array
         
         this.category = params.category ? params.category : null;
+        this.category = 'fashion';
         this.sortBy = params.sortBy ? params.sortBy : 'ascending';
         this.pageNo = params.page ? params.page : this.pageNo;
 
@@ -48,7 +50,7 @@ export class CollectionLeftSidebarComponent implements OnInit {
           // Sorting Filter
           this.products = this.productService.sortProducts(response, this.sortBy);
           // Category Filter
-          if(params.category)
+          if(params.category || this.onlyFashion)
             this.products = this.products.filter(item => item.type == this.category);
           // Price Filter
           this.products = this.products.filter(item => item.price >= this.minPrice && item.price <= this.maxPrice) 

@@ -7,176 +7,176 @@
                     <div class="row">
                         <div class="col-lg-6 col-sm-12 col-xs-12">
                             <div class="checkout-title">
-                                <h3>Billing Details</h3>
+                                <h3>Detalles de Pago</h3>
                             </div>
                             <div class="row check-out">
                                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                    <div class="field-label">First Name</div>
+                                    <div class="field-label">Nombre</div>
                                     <input type="text" name="firstname" [formControl]="checkoutForm.controls['firstname']" value="" placeholder="" autocomplete="off">
                                     <div *ngIf="checkoutForm.controls.firstname.touched && checkoutForm.controls.firstname.errors?.required" class="text text-danger">
-                                    First Name is required.
+                                        El nombre es requerido.
                                     </div>
                                     <div *ngIf="checkoutForm.controls.firstname.touched && checkoutForm.controls.firstname.errors?.pattern" class="text text-danger">
-                                    First Name must be an alphabates.
+                                        Solo se aceptan caracteres alfanúmericos.
                                     </div>
                                 </div>
                                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                    <div class="field-label">Last Name </div>
+                                    <div class="field-label">Apellido </div>
                                     <input type="text" name="lastname" [formControl]="checkoutForm.controls['lastname']" value="" placeholder="" autocomplete="off">
                                     <div *ngIf="checkoutForm.controls.lastname.touched && checkoutForm.controls.lastname.errors?.required" class="text text-danger">
-                                    Last Name is required.
+                                        El apellido es requerido.
                                     </div>
                                     <div *ngIf="checkoutForm.controls.lastname.touched && checkoutForm.controls.lastname.errors?.pattern" class="text text-danger">
-                                    Last Name must be an alphabates.
+                                        Solo se aceptan caracteres alfanúmericos.
                                     </div>
                                 </div>
                                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                    <div class="field-label">Phone</div>
+                                    <div class="field-label">Teléfono</div>
                                     <input type="text" name="phone" [formControl]="checkoutForm.controls['phone']" value="" placeholder="" autocomplete="off">
                                     <div *ngIf="checkoutForm.controls.phone.touched && checkoutForm.controls.phone.errors?.required" class="text text-danger">
-                                     Phone No is required.
+                                        El teléfono es requerido.
                                     </div>
                                     <div *ngIf="checkoutForm.controls.phone.touched && checkoutForm.controls.phone.errors?.pattern" class="text text-danger">
-                                      Phone No is must be number.
+                                        El teléfono solo acepta números.
                                     </div>
                                 </div>
                                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                    <div class="field-label">Email Address</div>
+                                    <div class="field-label">Email</div>
                                     <input type="text" name="email" [formControl]="checkoutForm.controls['email']" value="" placeholder="" autocomplete="off">
                                     <div *ngIf="checkoutForm.controls.email.touched && checkoutForm.controls.email.errors?.required" class="text text-danger">
-                                     Email is required
+                                        El email es requerido
                                     </div>
                                     <div *ngIf="checkoutForm.controls.email.touched && checkoutForm.controls.email.errors?.email" class="text text-danger">
-                                     Invalid Email
+                                        Email incorrecto
                                     </div>
                                 </div>
                                 <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                    <div class="field-label">Country</div>
+                                    <div class="field-label">País</div>
                                     <select name="country" [formControl]="checkoutForm.controls['country']">
-                                        <option value="" selected>Select Country</option>
-                                        <option value="India">India</option>
+                                        <option value="" selected>Seleccionar País</option>
+                                        <option value="Mexico">México</option>
                                         <option value="USA">USA</option>
                                         <option value="Australia">Australia</option>
                                     </select>
                                     <div *ngIf="checkoutForm.controls.country.touched && checkoutForm.controls.country.errors?.required" class="text text-danger">
-                                     Country is required
+                                        El país es requerido
                                     </div>
                                 </div>
                                 <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                    <div class="field-label">Address</div>
+                                    <div class="field-label">Dirección</div>
                                     <input type="text" name="address" [formControl]="checkoutForm.controls['address']" value="" placeholder="" autocomplete="off">
                                     <div *ngIf="checkoutForm.controls.address.touched && checkoutForm.controls.address.errors?.required" class="text text-danger">
-                                     Address is required
+                                        La dirección es requerida
                                     </div>
                                     <div *ngIf="checkoutForm.controls.address.touched && checkoutForm.controls.address.errors?.maxlength" class="text text-danger">
-                                      Maximum 50 character
+                                        Maximo de 50 caracteres
                                     </div>
                                 </div>
                                 <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                    <div class="field-label">Town/City</div>
+                                    <div class="field-label">Ciudad</div>
                                     <input type="text" name="town" [formControl]="checkoutForm.controls['town']" value="" placeholder="" autocomplete="off">
-                                     <div *ngIf="checkoutForm.controls.town.touched && checkoutForm.controls.town.errors?.required" class="text text-danger">
-                                     City is required
+                                    <div *ngIf="checkoutForm.controls.town.touched && checkoutForm.controls.town.errors?.required" class="text text-danger">
+                                        La ciudad es requerida
                                     </div>
                                 </div>
                                 <div class="form-group col-md-12 col-sm-6 col-xs-12">
-                                    <div class="field-label">State</div>
+                                    <div class="field-label">Estate</div>
                                     <input type="text" name="state" [formControl]="checkoutForm.controls['state']" value="" placeholder="" autocomplete="off">
-                                     <div *ngIf="checkoutForm.controls.state.touched && checkoutForm.controls.state.errors?.required" class="text text-danger">
-                                     State is required
+                                    <div *ngIf="checkoutForm.controls.state.touched && checkoutForm.controls.state.errors?.required" class="text text-danger">
+                                        El estado es requerido
                                     </div>
                                 </div>
                                 <div class="form-group col-md-12 col-sm-6 col-xs-12">
-                                    <div class="field-label">Postal Code</div>
+                                    <div class="field-label">Código Postal</div>
                                     <input type="text" name="postalcode" [formControl]="checkoutForm.controls['postalcode']" value="" placeholder="" autocomplete="off">
                                     <div *ngIf="checkoutForm.controls.postalcode.touched && checkoutForm.controls.postalcode.errors?.required" class="text text-danger">
-                                     Postalcode is required
+                                        El código postal es requerido
                                     </div>
                                 </div>
                             </div>
-                          <div class="row ">
-                            <div class="col-12">
-                              <div class="stripe-section">
-                                <h5>stripe js</h5>
-                                <div class="content">
-                                  <h5>dummy test</h5>
-                                  <table>
-                                    <tr>
-                                      <td>cart number</td>
-                                      <td>4242424242424242</td>
-                                    </tr>
-                                    <tr>
-                                      <td>mm/yy</td>
-                                      <td>2/2020</td>
-                                    </tr>
-                                    <tr>
-                                      <td>cvc</td>
-                                      <td>2222</td>
-                                    </tr>
-                                  </table>
+                            <div class="row ">
+                                <div class="col-12">
+                                    <div class="stripe-section">
+                                        <h5>Tarjeta</h5>
+                                        <div class="content">
+                                            <h5>prueba</h5>
+                                            <table>
+                                                <tr>
+                                                    <td>cart number</td>
+                                                    <td>4242424242424242</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>mm/yy</td>
+                                                    <td>2/2020</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>cvc</td>
+                                                    <td>2222</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
-                              </div>
                             </div>
-                          </div>
-                          <div class="row margin-cls">
-                            <div class="col-12">
-                              <div class="stripe-section">
-                                <h5>paypal</h5>
-                                <div class="content">
-                                  <h5>dummy test</h5>
-                                  <table>
-                                    <tr>
-                                      <td>cart number</td>
-                                      <td>4152521541244</td>
-                                    </tr>
-                                    <tr>
-                                      <td>mm/yy</td>
-                                      <td>11/18</td>
-                                    </tr>
-                                    <tr>
-                                      <td>cvc</td>
-                                      <td>521</td>
-                                    </tr>
-                                  </table>
+                            <div class="row margin-cls">
+                                <div class="col-12">
+                                    <div class="stripe-section">
+                                        <h5>paypal</h5>
+                                        <div class="content">
+                                            <h5>prueba</h5>
+                                            <table>
+                                                <tr>
+                                                    <td>cart number</td>
+                                                    <td>4152521541244</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>mm/yy</td>
+                                                    <td>11/18</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>cvc</td>
+                                                    <td>521</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
-                              </div>
                             </div>
-                          </div>
                         </div>
 
                         <div class="col-lg-6 col-sm-12 col-xs-12">
                             <div class="checkout-details">
                                 <div class="order-box">
                                     <div class="title-box">
-                                        <div>Product <span> Total</span></div>
+                                        <div>Producto <span> Total</span></div>
                                     </div>
                                     <ul class="qty" *ngIf='products.length'>
                                         <li *ngFor="let product of products">
-                                        	 {{ product.title }} × {{ product.quantity }}
-                                        	<span>
+                                            {{ product.title }} × {{ product.quantity }}
+                                            <span>
                                                 {{ (product.price | discount:product) * productService?.Currency.price | currency:productService?.Currency.currency:'symbol' }}
                                             </span>
                                         </li>
                                     </ul>
                                     <ul class="qty" *ngIf='!products.length'>
-                                        <li class="empty-checkout"> There are no products in cart </li>
+                                        <li class="empty-checkout"> No hay productos en el carrito </li>
                                     </ul>
                                     <ul class="sub-total">
                                         <li>
-                                        	Subtotal <span class="count">{{ getTotal | async | currency:productService?.Currency.currency:'symbol'}}</span>
+                                            Subtotal <span class="count">{{ getTotal | async | currency:productService?.Currency.currency:'symbol'}}</span>
                                         </li>
                                         <li *ngIf='products.length'>
-                                        	Shipping
-                                         <div class="shipping">
-                                            <div class="shopping-option">
-                                                <input type="radio" name="shipping" checked="checked" id="free-shipping">
-                                                <label for="free-shipping">Shipping</label>
+                                            Envío
+                                            <div class="shipping">
+                                                <div class="shopping-option">
+                                                    <input type="radio" name="shipping" checked="checked" id="free-shipping">
+                                                    <label for="free-shipping">Envío</label>
+                                                </div>
+                                                <div class="shopping-option">
+                                                    <input type="radio" name="shipping" id="local-pickup">
+                                                    <label for="local-pickup">Recoger en Tienda</label>
+                                                </div>
                                             </div>
-                                            <div class="shopping-option">
-                                                <input type="radio"  name="shipping" id="local-pickup">
-                                                <label for="local-pickup">Local Pickup</label>
-                                            </div>
-                                         </div>
                                         </li>
                                     </ul>
                                     <ul class="total">
@@ -190,8 +190,8 @@
                                             <ul>
                                                 <li>
                                                     <div class="radio-option">
-                                                        <input type="radio" [(ngModel)]="payment" [value]="'Stripe'"  name="payment-group" id="payment-2">
-                                                        <label for="payment-2">Stripe
+                                                        <input type="radio" [(ngModel)]="payment" [value]="'Stripe'" name="payment-group" id="payment-2">
+                                                        <label for="payment-2">Tarjeta
                                                             <span class="small-text">Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</span></label>
                                                     </div>
                                                 </li>
@@ -205,8 +205,8 @@
                                         </div>
                                     </div>
                                     <div class="text-right">
-                                        <button type="submit" class="btn-solid btn" [disabled]="!checkoutForm.valid" (click)="stripeCheckout()" *ngIf="payment == 'Stripe'">
-                                           Place Order
+                                        <button type="submit" class="btn-solid btn btn-mercadia" [disabled]="!checkoutForm.valid" (click)="stripeCheckout()" *ngIf="payment == 'Stripe'">
+                                          Realizar Pedido
                                         </button>
                                         <ngx-paypal [config]="payPalConfig" *ngIf="payment == 'Paypal'"></ngx-paypal>
                                     </div>

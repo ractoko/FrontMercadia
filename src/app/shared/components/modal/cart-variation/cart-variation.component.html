@@ -46,15 +46,15 @@
                 </li>
                 <li>
                     <div class="buttons">
-                        <a [routerLink]="['/shop/cart']" class="btn btn-solid btn-xs view-cart">view cart</a>
-                        <a [routerLink]="['/shop/checkout']" class="btn btn-solid btn-xs checkout">checkout</a>
+                        <a [routerLink]="['/shop/cart']" class="btn btn-solid btn-xs view-cart">ver carrito</a>
+                        <a [routerLink]="['/shop/checkout']" class="btn btn-solid btn-xs checkout">pagar</a>
                     </div>
                 </li>
             </ul>
         </div>
         <div class="col-sm-12 empty-cart-cls text-left" *ngIf="!products.length">
             <h4 class="mt-3">
-              <strong>Your Cart is Empty</strong>
+                <strong>Your Cart is Empty</strong>
             </h4>
             <a [routerLink]="['/shop/collection/left/sidebar']" class="btn btn-solid">continue shopping</a>
         </div>

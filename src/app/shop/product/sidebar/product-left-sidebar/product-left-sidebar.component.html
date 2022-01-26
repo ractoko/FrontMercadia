@@ -65,7 +65,7 @@
                                         <span>{{ product?.discount }}% descuento</span>
                                     </h4>
                                     <h3>
-                                        {{ (product?.price | discount:product) * productService.Currency?.price | currency: productService.Currency?.currency:'symbol' }}
+                                        {{ (product?.price | discount:product) * productService.Currency?.price | currency: productService.Currency?.currency:'symbol' }} /KG
                                     </h3>
                                     <ul class="color-variant" *ngIf="Color(product?.variants).length">
                                         <li [class]="color" [class.active]="activeSlide == i.toString()" *ngFor="let color of Color(product?.variants); index as i" [ngStyle]="{'background-color': color}" (click)="owlCar.to(activeSlide = i.toString())">
@@ -108,8 +108,8 @@
                                         </div>
                                     </div>
                                     <div class="product-buttons">
-                                        <a href="javascrip:void(0)" class="btn btn-solid" [class.disabled]="counter > product.stock" (click)="addToCart(product)">Agregar al Carrito</a>
-                                        <a href="javascrip:void(0)" class="btn btn-solid" [class.disabled]="counter > product.stock" (click)="buyNow(product)">Comprar Ahora</a>
+                                        <a href="javascrip:void(0)" class="btn btn-solid btn-mercadia" [class.disabled]="counter > product.stock" (click)="addToCart(product)">Agregar al Carrito</a>
+                                        <a href="javascrip:void(0)" class="btn btn-solid btn-mercadia" [class.disabled]="counter > product.stock" (click)="buyNow(product)">Comprar Ahora</a>
                                     </div>
                                     <div class="border-product">
                                         <h6 class="product-title">Descripción</h6>
