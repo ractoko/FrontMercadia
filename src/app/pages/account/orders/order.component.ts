@@ -43,6 +43,7 @@ export class OrderComponent implements OnInit {
 
   createTableProducts(data: any) {
     this.dataProducts = new MatTableDataSource( data );
+    this.dataProducts._updateChangeSubscription();
     this.dataSource.sort = this.sort;
     this.displayedColumnsProducts = ['id', 'title', 'quantity', 'edit', 'remove'];
   }
@@ -58,8 +59,15 @@ export class OrderComponent implements OnInit {
   }
 
   remove(productId: number){
-    const elem = JSON.stringify( ORDERS.find( element => element.id === 1).products.filter( product => product.product.id !== productId) );
-    this.createTableProducts(ORDERS.find( element => element.id === 1).products.filter( product => product.product.id !== productId) );
+    const elem = ORDERS.find( element => element.id === 1).products.filter( product => product.product.id !== productId);
+    let orders: Order[];
+    let order = ORDERS.find(element => element.id === 1);
+    order.products.pop();
+    order.products.pop();
+    order.products = elem;
+    orders = [order];
+    this.createTable(orders);
+    this.createTableProducts( elem );
   }
 
   getStatus(status: number){
