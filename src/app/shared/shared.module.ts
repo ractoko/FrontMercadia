@@ -54,6 +54,8 @@ import { TapToTopComponent } from './components/tap-to-top/tap-to-top.component'
 // Pipes
 import { DiscountPipe } from './pipes/discount.pipe';
 
+import { MatExpansionModule } from '@angular/material/expansion'
+
 @NgModule({
   declarations: [
     HeaderOneComponent,
@@ -100,7 +102,8 @@ import { DiscountPipe } from './pipes/discount.pipe';
       // preset: scrollPreset // <-- tell LazyLoadImage that you want to use scrollPreset
     }),
     NgxSkeletonLoaderModule,
-    TranslateModule
+    TranslateModule,
+    MatExpansionModule
   ],
   exports: [
     CommonModule,
@@ -139,7 +142,8 @@ import { DiscountPipe } from './pipes/discount.pipe';
     SkeletonProductBoxComponent,
     LayoutBoxComponent,
     TapToTopComponent,
-    DiscountPipe
+    DiscountPipe,
+    MatExpansionModule
   ]
 })
 export class SharedModule { }

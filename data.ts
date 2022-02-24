@@ -98,7 +98,7 @@ export let ORDERS: Order[] = [
         paymentMethod: 'Tarjeta',
         isPaid: true,
         dateDelivery: new Date('01/11/2022'),
-        status: Status.delivery,
+        status: Status.Enviado,
         active: true
     }
 ];

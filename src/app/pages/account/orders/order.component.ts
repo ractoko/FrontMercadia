@@ -14,9 +14,12 @@ import { Product } from 'src/app/shared/classes/product';
 })
 export class OrderComponent implements OnInit {
 
-  dataSource;
+  dataSource: MatTableDataSource<unknown>;
+  dataProducts: MatTableDataSource<unknown>;
   displayedColumns = [];
+  displayedColumnsProducts = [];
   @ViewChild(MatSort) sort: MatSort;
+  
   
   constructor(private router: Router, private route: ActivatedRoute) { }
 
@@ -33,23 +36,34 @@ export class OrderComponent implements OnInit {
   }
 
   createTable(data = null) {    
-    this.dataSource = new MatTableDataSource( data ?? ORDERS);
+    this.dataSource = new MatTableDataSource( data ?? ORDERS );
     this.dataSource.sort = this.sort;
-    this.displayedColumns = ['id', 'user', 'date', 'total', 'products','address'];
+    this.displayedColumns = ['id', 'user', 'date', 'total', 'products', 'address', 'status'];
   }
 
+  createTableProducts(data: any) {
+    this.dataProducts = new MatTableDataSource( data );
+    this.dataSource.sort = this.sort;
+    this.displayedColumnsProducts = ['id', 'title', 'quantity', 'edit', 'remove'];
+  }
+
+  tableProducts(position: number){
+    const data = ORDERS.find(order => order.id === position)
+    console.log(data.products);
+    this.createTableProducts(data.products);
+  }
   
-  edit(position: number){
-    const elem = JSON.stringify( USERS.find( element => element.position === position) );
-    this.router.navigate(['pages','register'],{
-      queryParamsHandling: 'merge',
-      queryParams: { elem }
-    });
+  edit(productId: number){
+
   }
 
-  remove(position: number){
-    const elem = JSON.stringify( USERS.find( element => element.position === position) );
-    this.createTable(USERS.filter(user => user.position !== position));
+  remove(productId: number){
+    const elem = JSON.stringify( ORDERS.find( element => element.id === 1).products.filter( product => product.product.id !== productId) );
+    this.createTableProducts(ORDERS.find( element => element.id === 1).products.filter( product => product.product.id !== productId) );
+  }
+
+  getStatus(status: number){
+    return Status[status];
   }
 }
 
@@ -64,13 +78,12 @@ export interface Address {
 }
 
 export enum Status {
-  create = 1,
-  paySuccess,
-  payError,
-  proccess,
-  delivery,
-  complete,
-  error
+  Creado = 1,
+  Pagado,
+  Procesado,
+  Enviado,
+  Completado,
+  Error
 }
 
 export interface ProductOrder {
