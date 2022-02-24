@@ -30,20 +30,26 @@
                 <img src="assets/images/icon/user.png" class="img-fluid" alt="settong">
                 <i class="ti-settings"></i>
             </div>
-            <!-- <div class="show-div setting">
-        <h6>language</h6>
-        <ul>
-          <li *ngFor="let language of languages">
-            <a href="javascript:void(0)" (click)="changeLanguage(language.code)">{{ language.name }}</a>
-          </li>
-        </ul>
-        <h6>currency</h6>
-        <ul class="list-inline">
-          <li *ngFor="let currency of currencies">
-            <a href="javascript:void(0)" (click)="changeCurrency(currency)">{{ currency.name }}</a>
-          </li>
-        </ul>
-      </div> -->
+            <div class="show-div setting">
+                <h6>Pedidos</h6>
+                <ul>
+                    <li *ngFor="let pedido of pedidos">
+                        <a href="javascript:void(0)" (click)="changePath(pedido.path)">{{ pedido.name }}</a>
+                    </li>
+                </ul>
+                <h6>Clientes</h6>
+                <ul class="list-inline">
+                    <li *ngFor="let cliente of clientes">
+                        <a href="javascript:void(0)" (click)="changePath(cliente.path)">{{ cliente.name }}</a>
+                    </li>
+                </ul>
+                <h6>Banners</h6>
+                <ul class="list-inline">
+                    <li *ngFor="let banner of banners">
+                        <a href="javascript:void(0)" (click)="changePath(banner.path)">{{ banner.name }}</a>
+                    </li>
+                </ul>
+            </div>
         </li>
         <li class="onhover-div mobile-cart">
             <div>

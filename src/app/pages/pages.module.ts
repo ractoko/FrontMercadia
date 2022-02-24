@@ -39,6 +39,12 @@ import { MasonryGridTwoComponent } from './portfolio/masonry-grid-two/masonry-gr
 import { MasonryGridThreeComponent } from './portfolio/masonry-grid-three/masonry-grid-three.component';
 import { MasonryGridFourComponent } from './portfolio/masonry-grid-four/masonry-grid-four.component';
 import { MasonryFullWidthComponent } from './portfolio/masonry-full-width/masonry-full-width.component';
+import { UserComponent } from './account/users/user.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
+import { OrderComponent } from './account/orders/order.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +53,8 @@ import { MasonryFullWidthComponent } from './portfolio/masonry-full-width/masonr
     DashboardComponent,
     LoginComponent,
     RegisterComponent,
+    UserComponent,
+    OrderComponent,
     ForgetPasswordComponent,
     ProfileComponent,
     ContactComponent,
@@ -73,13 +81,23 @@ import { MasonryFullWidthComponent } from './portfolio/masonry-full-width/masonr
     MasonryGridTwoComponent,
     MasonryGridThreeComponent,
     MasonryGridFourComponent,
-    MasonryFullWidthComponent
+    MasonryFullWidthComponent,
   ],
   imports: [
     CommonModule,
     GalleryModule.forRoot(),
     SharedModule,
-    PagesRoutingModule
-  ]
+    PagesRoutingModule,
+    MatTableModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule
+  ],
+  exports:[
+    MatTableModule,
+    MatInputModule,
+    MatButtonModule,
+  ],
+  providers:[]
 })
 export class PagesModule { }

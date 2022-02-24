@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 import { ProductService } from "../../services/product.service";
 import { Product } from "../../classes/product";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-settings',
@@ -15,35 +16,28 @@ export class SettingsComponent implements OnInit {
   public products: Product[] = [];
   public search: boolean = false;
   
-  public languages = [{ 
-    name: 'English',
-    code: 'en'
-  }, {
-    name: 'French',
-    code: 'fr'
+  public clientes = [{
+    name: 'Registrar',
+    path: 'register'
+  },{
+    name: 'Listado',
+    path: 'users'
+  }]
+
+  public pedidos = [{ 
+    name: 'Pedidos',
+    path: 'orders'
   }];
 
-  public currencies = [{
-    name: 'Euro',
-    currency: 'EUR',
-    price: 0.90 // price of euro
-  }, {
-    name: 'Rupees',
-    currency: 'INR',
-    price: 70.93 // price of inr
-  }, {
-    name: 'Pound',
-    currency: 'GBP',
-    price: 0.78 // price of euro
-  }, {
-    name: 'Dollar',
-    currency: 'USD',
-    price: 1 // price of usd
-  }]
+  public banners = [{
+    name: 'Editar',
+    path: '',
+  }];
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object,
     private translate: TranslateService,
-    public productService: ProductService) {
+    public productService: ProductService,
+    private router: Router) {
     this.productService.cartItems.subscribe(response => this.products = response);
   }
 
@@ -52,6 +46,10 @@ export class SettingsComponent implements OnInit {
 
   searchToggle(){
     this.search = !this.search;
+  }
+
+  changePath(path){
+    this.router.navigate(['pages',path]);
   }
 
   changeLanguage(code){
