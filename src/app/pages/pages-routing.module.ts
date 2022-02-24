@@ -35,6 +35,7 @@ import { MasonryGridFourComponent } from './portfolio/masonry-grid-four/masonry-
 import { MasonryFullWidthComponent } from './portfolio/masonry-full-width/masonry-full-width.component';
 import { UserComponent } from './account/users/user.component';
 import { OrderComponent } from './account/orders/order.component';
+import { AddressComponent } from './account/address/address.component';
 
 const routes: Routes = [
   { 
@@ -64,6 +65,10 @@ const routes: Routes = [
   { 
     path: 'orders', 
     component: OrderComponent 
+  },
+  { 
+    path: 'address', 
+    component: AddressComponent 
   },
   { 
     path: 'forget/password', 

@@ -58,6 +58,14 @@ export class OrderComponent implements OnInit {
 
   }
 
+  editAddress(address: Address){
+    const elem = JSON.stringify( address );
+    this.router.navigate(['pages','address'],{
+      queryParamsHandling: 'merge',
+      queryParams: { elem }
+    });
+  }
+
   remove(productId: number){
     const elem = ORDERS.find( element => element.id === 1).products.filter( product => product.product.id !== productId);
     let orders: Order[];

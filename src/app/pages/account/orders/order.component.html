@@ -90,7 +90,7 @@
                                 <ng-container matColumnDef="address">
                                     <th mat-header-cell *matHeaderCellDef> Dirección </th>
                                     <td mat-cell *matCellDef="let element">
-                                        <mat-icon>send</mat-icon>
+                                        <mat-icon (click)="editAddress(element.address)">send</mat-icon>
                                     </td>
                                 </ng-container>
 

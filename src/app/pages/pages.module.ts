@@ -45,6 +45,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { OrderComponent } from './account/orders/order.component';
+import { AddressComponent } from './account/address/address.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { OrderComponent } from './account/orders/order.component';
     RegisterComponent,
     UserComponent,
     OrderComponent,
+    AddressComponent,
     ForgetPasswordComponent,
     ProfileComponent,
     ContactComponent,
