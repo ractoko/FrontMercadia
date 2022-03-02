@@ -36,6 +36,7 @@ import { MasonryFullWidthComponent } from './portfolio/masonry-full-width/masonr
 import { UserComponent } from './account/users/user.component';
 import { OrderComponent } from './account/orders/order.component';
 import { AddressComponent } from './account/address/address.component';
+import { BannerComponent } from './account/banner/banner.component';
 
 const routes: Routes = [
   { 
@@ -69,6 +70,10 @@ const routes: Routes = [
   { 
     path: 'address', 
     component: AddressComponent 
+  },
+  { 
+    path: 'banners', 
+    component: BannerComponent 
   },
   { 
     path: 'forget/password', 

@@ -47,6 +47,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { OrderComponent } from './account/orders/order.component';
 import { AddressComponent } from './account/address/address.component';
 import { UploadFileComponent } from './upload-file/upload-file.component';
+import { ImageUploadModule } from 'angular2-image-upload';
+import { BannerComponent } from './account/banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -86,6 +88,7 @@ import { UploadFileComponent } from './upload-file/upload-file.component';
     MasonryGridFourComponent,
     MasonryFullWidthComponent,
     UploadFileComponent,
+    BannerComponent,
   ],
   imports: [
     CommonModule,
@@ -95,7 +98,8 @@ import { UploadFileComponent } from './upload-file/upload-file.component';
     MatTableModule,
     MatInputModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    ImageUploadModule.forRoot()
   ],
   exports:[
     MatTableModule,

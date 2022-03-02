@@ -31,7 +31,7 @@ export class SettingsComponent implements OnInit {
 
   public banners = [{
     name: 'Editar',
-    path: '',
+    path: 'banners',
   }];
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object,
