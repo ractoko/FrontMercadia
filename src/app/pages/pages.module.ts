@@ -46,6 +46,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { OrderComponent } from './account/orders/order.component';
 import { AddressComponent } from './account/address/address.component';
+import { UploadFileComponent } from './upload-file/upload-file.component';
 
 @NgModule({
   declarations: [
@@ -84,6 +85,7 @@ import { AddressComponent } from './account/address/address.component';
     MasonryGridThreeComponent,
     MasonryGridFourComponent,
     MasonryFullWidthComponent,
+    UploadFileComponent,
   ],
   imports: [
     CommonModule,
