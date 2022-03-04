@@ -61,6 +61,8 @@ export function app() {
 
   // All regular routes use the Universal engine
   server.get('*', (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     res.render(indexHtml, { req, 
       providers: [{ 
         provide: APP_BASE_HREF,

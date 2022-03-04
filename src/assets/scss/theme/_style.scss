@@ -14228,3 +14228,10 @@ div#loading-bar {
     margin-top: 25px;
     border-radius: 10px;
 }
+
+.btn-load-img {
+    background: $theme-deafult !important;
+    border: none;
+    border-radius: 10px;
+    color: $white !important;
+}

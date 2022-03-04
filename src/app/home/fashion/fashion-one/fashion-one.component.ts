@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductSlider } from '../../../shared/data/slider';
 import { Product } from '../../../shared/classes/product';
 import { ProductService } from '../../../shared/services/product.service';
+import { SLIDERS } from 'data';
 
 @Component({
   selector: 'app-fashion-one',
@@ -12,6 +13,7 @@ export class FashionOneComponent implements OnInit {
 
   public products: Product[] = [];
   public productCollections: any[] = [];
+  public sliders = SLIDERS;
   
   constructor(public productService: ProductService) {
     this.productService.getProducts.subscribe(response => {
@@ -27,16 +29,6 @@ export class FashionOneComponent implements OnInit {
   }
 
   public ProductSliderConfig: any = ProductSlider;
-
-  public sliders = [{
-    title: 'Frescura',
-    subTitle: 'Garantizada',
-    image: 'assets/images/slider/1.jpg'
-  }, {
-    title: 'Calidad',
-    subTitle: 'Garantizada',
-    image: '../../../../assets/images/slider/2.jpg'
-  }]
 
   // Collection banner
   public collections = [{
