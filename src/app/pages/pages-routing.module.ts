@@ -37,6 +37,7 @@ import { UserComponent } from './account/users/user.component';
 import { OrderComponent } from './account/orders/order.component';
 import { AddressComponent } from './account/address/address.component';
 import { BannerComponent } from './account/banner/banner.component';
+import { BannerListComponent } from './account/banner-list/banner-list.component';
 
 const routes: Routes = [
   { 
@@ -74,6 +75,10 @@ const routes: Routes = [
   { 
     path: 'banners', 
     component: BannerComponent 
+  },
+  { 
+    path: 'banners-list', 
+    component: BannerListComponent 
   },
   { 
     path: 'forget/password', 

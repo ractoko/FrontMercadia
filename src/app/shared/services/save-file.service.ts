@@ -8,6 +8,7 @@ export interface saveImg {
 	subTitle: string;
 	// image?: Blob;
 	image: string;
+	path: string;
 }
 
 @Injectable({

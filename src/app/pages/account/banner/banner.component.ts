@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { SLIDERS } from 'data';
 import { saveImg } from 'src/app/shared/services/save-file.service';
 
@@ -13,10 +13,20 @@ export class BannerComponent implements OnInit {
   bannerData!: FormGroup;
   private image: saveImg;
   
-  constructor(private formBuilder: FormBuilder, private router: Router) { }
+  constructor(private formBuilder: FormBuilder, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.createBannerForm();
+    this.route.queryParams
+      .filter(params => params.elem)
+      .subscribe(params => {
+        const elem = JSON.parse(params.elem);
+        this.bannerData.get('title')?.setValue(elem.title);
+        this.bannerData.get('subtitle')?.setValue(elem.subTitle);
+        this.bannerData.get('path')?.setValue(elem.path);
+        this.bannerData.get('image')?.setValue(elem.image);
+      }
+    );
   }
 
   createBannerForm() {
@@ -25,6 +35,9 @@ export class BannerComponent implements OnInit {
         Validators.required
       ])],
       subtitle: ['', Validators.compose([
+        Validators.required
+      ])],
+      path: ['', Validators.compose([
         Validators.required
       ])]
     });
@@ -37,7 +50,8 @@ export class BannerComponent implements OnInit {
       image: $event.image,
       // image: this.convertB64toBlob(event.src),
       title: this.bannerData.get('title').value,
-      subTitle: this.bannerData.get('subtitle').value
+      subTitle: this.bannerData.get('subtitle').value,
+      path: this.bannerData.get('path').value
     };
 
     // this.saveImgService.saveFile(this.image);

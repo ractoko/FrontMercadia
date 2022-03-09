@@ -38,7 +38,8 @@ export class UploadFileComponent implements OnInit, AfterViewInit {
       image: event.src,
       // image: this.convertB64toBlob(event.src),
       title: event.file.name,
-      subTitle: ''
+      subTitle: '',
+      path: ''
     };
 
     // this.saveImgService.saveFile(this.image);

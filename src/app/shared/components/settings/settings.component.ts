@@ -30,8 +30,11 @@ export class SettingsComponent implements OnInit {
   }];
 
   public banners = [{
-    name: 'Editar',
+    name: 'Agregar',
     path: 'banners',
+  },{
+    name: 'Lista',
+    path: 'banners-list'
   }];
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object,

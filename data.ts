@@ -106,10 +106,12 @@ export let ORDERS: Order[] = [
 export let SLIDERS = [{
     title: 'Frescura',
     subTitle: 'Garantizada',
-    image: 'assets/images/slider/1.jpg'
+    image: 'assets/images/slider/1.jpg',
+    path: ''
   }, {
     title: 'Calidad',
     subTitle: 'Garantizada',
-    image: '../../../../assets/images/slider/2.jpg'
+    image: '../../../../assets/images/slider/2.jpg',
+    path: ''
   }
 ];

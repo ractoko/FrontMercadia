@@ -8,13 +8,17 @@
                 <div class="theme-card">
                     <form class="theme-form" [formGroup]="bannerData">
                         <div class="form-row">
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <label for="title">Título</label>
                                 <input type="text" class="form-control" formControlName="title" id="title" placeholder="Título" required="">
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <label for="subtitle">Subtítulo</label>
                                 <input type="text" class="form-control" formControlName="subtitle" id="subtitle" placeholder="Subtítulo" required="">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="path">Ruta</label>
+                                <input type="text" class="form-control" formControlName="path" id="path" placeholder="Ruta" required="">
                             </div>
                         </div>
                         <div class="form-row">

@@ -49,6 +49,7 @@ import { AddressComponent } from './account/address/address.component';
 import { UploadFileComponent } from './upload-file/upload-file.component';
 import { ImageUploadModule } from 'angular2-image-upload';
 import { BannerComponent } from './account/banner/banner.component';
+import { BannerListComponent } from './account/banner-list/banner-list.component';
 
 @NgModule({
   declarations: [
@@ -89,6 +90,7 @@ import { BannerComponent } from './account/banner/banner.component';
     MasonryFullWidthComponent,
     UploadFileComponent,
     BannerComponent,
+    BannerListComponent,
   ],
   imports: [
     CommonModule,
