@@ -28,16 +28,22 @@ export class BannerListComponent implements OnInit {
   createTable(data = null) {    
     this.dataSource = new MatTableDataSource( data ?? SLIDERS );
     this.dataSource.sort = this.sort;
-    this.displayedColumns = ['title', 'subTitle', 'image', 'path', 'edit'];
+    this.displayedColumns = ['title', 'subTitle', 'image', 'path', 'edit','remove'];
   }
   
   edit(banner: any){
-    console.log(banner);
     const elem = JSON.stringify( banner );
     this.router.navigate(['pages','banners'],{
       queryParamsHandling: 'merge',
       queryParams: { elem }
     });
+  }
+
+  remove(banner: any){
+    const sliders = SLIDERS.filter( slider => slider.title === banner.title 
+                                            && slider.subTitle === banner.subTitle
+                                            && slider.path === banner.path);
+    this.createTable(sliders);
   }
 
 }
